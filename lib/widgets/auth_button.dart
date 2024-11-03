@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class Button extends StatelessWidget {
+class AuthButton extends StatelessWidget {
   final String title;
   final VoidCallback onPressed;
 
-  const Button({super.key, required this.title, required this.onPressed});
+  const AuthButton({super.key, required this.title, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -12,22 +12,9 @@ class Button extends StatelessWidget {
       width: 160, // Set the desired width
       height: 40, // Set the desired height
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Colors.tealAccent.shade400,
-            Colors.blueAccent.shade400,
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
+        color: Colors.transparent,
         borderRadius: BorderRadius.circular(8),
-        boxShadow: const[
-          BoxShadow(
-            color: Colors.black26,
-            offset: Offset(0, 4),
-            blurRadius: 8,
-          ),
-        ],
+        border: Border.all(color: Colors.white),
       ),
       child: ElevatedButton(
         onPressed: onPressed,

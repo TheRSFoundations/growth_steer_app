@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../models/bg_model.dart';
 import '../models/auth_model.dart';
 import '../utils/text_util.dart';
-import '../widgets/button.dart';
+import '../widgets/auth_button.dart';
 import 'home.dart'; // Import the Homepage widget
 
 class LoginScreen extends StatefulWidget {
@@ -27,7 +27,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
     // Basic check (for example purposes)
     if (loginRequest.email == 'user@example.com' &&
-        loginRequest.password == 'password123') {
+        loginRequest.password == 'password@123') {
       // If login is successful, replace the current screen with Homepage
       Navigator.pushReplacement(
         context,
@@ -150,7 +150,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Spacer(),
                     // Use Button widget and pass the handleLogin function as the onPressed callback
                     Center(
-                      child: Button(
+                      child: AuthButton(
                         title: "Log In",
                         onPressed: handleLogin,
                       ),
